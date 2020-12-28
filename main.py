@@ -299,7 +299,7 @@ def purchace(techname):
 		sp()
 		if g >= -1:
 			buying = input('Берём? Тогда нажми B. Нет? Жми что угодно (не бери): ')
-			if buying == 'B' or buying == 'b' or buying == 'В' or buying == 'в' and g >= 650:
+			if buying == 'B' or buying == 'b' or buying == 'В' or buying == 'в':
 				print('Что ты наделал! Ведь теперь вы владеете самой плохой техникой Истребителя!')
 				goldistrebitel = g - 0
 				goldistrebitel = str(goldistrebitel)
@@ -327,19 +327,27 @@ def purchace(techname):
 		w()
 		sp()
 		print('Описание:')
-		print('Очень большые здоровье и урон. Всё портит лишь то, что он ходит 1 раз в 2 такта. Так-то!')
+		print('Универсльнейшая из универсальнейших! Универсальней некуда!')
 		w()
 		sp()
 		print('Скорость х./т.:')
-		print('0.5')
+		print('1')
 		w()
 		sp()
 		print('Урон от коронного приёма:')
-		print('Огненный ветер - 20.')
+		print('Нейтронная бомба - 30 (замораживает владельца техники на 2 такта).')
 		w()
 		sp()
 		print('Урон от обычного приёма:')
-		print('Языки пламени - 15.')
+		print('СВД - 15.')
+		w()
+		sp()
+		print('Урон от ещё одного обычного приёма:')
+		print('Пистолет - 10.')
+		w()
+		sp()
+		print('Урон от ещё одного обычного приёма:')
+		print('Автомат - 17.')
 		w()
 		sp()
 		print('Здоровье:')
@@ -350,19 +358,19 @@ def purchace(techname):
 		print('650 щерублей.')
 		w()
 		sp()
-		if g >= 650:
+		if g >= 600:
 			buying = input('Берём? Тогда нажми B. Нет? Жми что угодно: ')
-			if buying == 'B' or buying == 'b' or buying == 'В' or buying == 'в' and g >= 650:
-				print('Здорово, ведь теперь вы владеете техникой Феникса!')
-				goldpheonix = g - 650
-				goldpheonix = str(goldpheonix)
+			if buying == 'B' or buying == 'b' or buying == 'В' or buying == 'в' and g >= 600:
+				print('Здорово, ведь теперь вы владеете техникой Оружейника!')
+				goldgunshop = g - 600
+				goldgunshop = str(goldgunshop)
 				gold = open(r'src/golds.txt', 'r+')
 				gold.seek(0)
 				gold.close()
 				gold = open(r'src/golds.txt', 'r+')
-				gold.write(goldpheonix)
-				f1.seek(0)
-				p = f1.write('1')
+				gold.write(goldgunshop)
+				o1.seek(0)
+				o = f1.write('1')
 			else:
 				shop()
 		else:
