@@ -13,6 +13,7 @@ mn1 = open(r'src/saves mnzhk.txt', 'r+')
 u1 = open(r'src/saves uv.txt', 'r+')
 md1 = open(r'src/saves minder.txt', 'r+')
 j1 = open(r'src/saves jelly.txt', 'r+')
+y1 = open(r'src/yaIiya-techs', 'r+')
 
 gold = open(r'src/golds.txt', 'r+')
 
@@ -31,6 +32,7 @@ mn = mn1.read(1)
 u = u1.read(1)
 md = md1.read(1)
 j = j1.read(1)
+y = y1.read(1)
 
 def shop():
 	sp()
@@ -80,6 +82,9 @@ def shop():
 	if u == '0':
 		print('12. Желе')
 		w()
+	if y == '0':
+		print('13. YaIiya')
+		w()
 # Выбор понравившейся техники или понравившегося артефакта
 	while True:
 		buynum = int(input('Введите номер понравившейся вам вещи (без точки), или E чтобы уйти домой, в лобби: '))
@@ -110,6 +115,8 @@ def shop():
 				print('Неправильный символ!')
 			elif buynum == 12 and j == '1':
 				print('Неправильный символ!')
+			elif buynum == 13 and y = '1':
+				print('Ты уже купил меня.')
 			if buynum == 1 and v == '0':
 				purchace(buynum)
 				break
