@@ -1,6 +1,7 @@
 # Импортируем нужные библиотеки
 from random import*
 from time import*
+from sys import*
 
 # Открываем файлы сохранения
 v1 = open(r'src/saves vamp.txt', 'r+')
@@ -38,10 +39,10 @@ j = j1.read(1)
 au = au1.read(1)
 lit = lit1.read(1)
 
-# Создаём списки техник и артефактов
+# Создаём списки техник
 techs = ['Вампир', 'Феникс', 'Истребитель', 'Оружейник', 'Дракон', 'Альбатрос', 'Бык', 'Увалютор', 'Мегалодон', 'МНЖК-1', 'Майндер', 'Желе']
-artifacts = ['Амулет удачи', '[Литералы]']
 
+coin = ['1','2']
 # Создаём переменную выбора техники у противника
 tf = choice(techs)
 
@@ -355,7 +356,7 @@ def purchace(techname):
 		w()
 		sp()
 		print('Стоимость:')
-		print('650 щерублей.')
+		print('600 щерублей.')
 		w()
 		sp()
 		if g >= 600:
@@ -390,6 +391,7 @@ def cd():
 	w()
 	print('1')
 	w()
+	sp()
 	print('Бой!')
 	w()
 	w()
@@ -481,9 +483,41 @@ def start():
 	w()
 	lobby()
 
+def arith():
+	opponenta = choice(techs)
+	sp()
+	w()
+	print('Итак...')
+	w()
+	cd()
+	print('Ваш протиник -', opponenta)
+	if opponenta == tf[1]:
+		cointhrow = choice(coin)
+		if cointhrow == coin[1]:
+			print('Вы ходите первым B)!')
+			firstt = 1
+		elif cointhrow == coin[2]:
+			print('Вы ходите вторым :(!')
+			firstt = 2
+
+
+
 # Бой
 def fight():
-	cd()
+	while True:
+		fch = input('Какой режим выберем? Арифметический (A), геометричемкий (G) или пойдём в рейд на босса (R)?')
+		if fch == 'a' or fch == 'a' or fch == 'a' or fch == 'a':
+				arith()
+				break
+		elif fch == 'a' or fch == 'a' or fch == 'a' or fch == 'a':
+				geom()
+				break
+		elif fch == 'a' or fch == 'a' or fch == 'a' or fch == 'a':
+				bossraid()
+				break
+		else:
+			print('НепрОвильный симвАл!')
+
 
 # Основная программа
-start()
+arith()
