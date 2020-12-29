@@ -3,6 +3,7 @@ from shop import *
 from fight import *
 from sys import *
 from random import *
+from main import*
 
 def exit():
     exit()
@@ -12,8 +13,6 @@ def sp():
 # Ожидание
 def w():
     sleep(0.3)
-
-# Магазин
 
 # Обратный отсчёт от начала боя
 def cd():
