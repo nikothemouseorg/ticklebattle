@@ -92,29 +92,29 @@ def shop():
 			lobby()
 		if buynum == 1 or buynum == 2 or buynum == 3 or buynum == 4 or buynum == 5 or buynum == 6 or buynum == 7 or buynum == 8 or buynum == 9 or buynum == 10 or buynum == 12 or buynum == 13 or buynum == 14:
 			if buynum == 1 and v == '1':
-				print('Неправильный символ!')
+				print('Вы уже купили эту технику!')
 			elif buynum == 2 and f == '1':
-				print('Неправильный символ!')
+				print('Вы уже купили эту технику!')
 			elif buynum == 3 and i == '1':
-				print('Неправильный символ!')
+				print('Вы уже купили эту технику!')
 			elif buynum == 4 and o == '1':
-				print('Неправильный символ!')
+				print('Вы уже купили эту технику!')
 			elif buynum == 5 and d == '1':
-				print('Неправильный символ!')
+				print('Вы уже купили эту технику!')
 			elif buynum == 6 and a == '1':
-				print('Неправильный символ!')
+				print('Вы уже купили эту технику!')
 			elif buynum == 7 and b == '1':
-				print('Неправильный символ!')
+				print('Вы уже купили эту технику!')
 			elif buynum == 8 and u == '1':
-				print('Неправильный символ!')
+				print('Вы уже купили эту технику!')
 			elif buynum == 9 and me == '1':
-				print('Неправильный символ!')
+				print('Вы уже купили эту технику!')
 			elif buynum == 10 and mn == '1':
-				print('Неправильный символ!')
+				print('Вы уже купили эту технику!')
 			elif buynum == 11 and md == '1':
-				print('Неправильный символ!')
+				print('Вы уже купили эту технику!')
 			elif buynum == 12 and j == '1':
-				print('Неправильный символ!')
+				print('Вы уже купили эту технику!')
 			elif buynum == 13 and y = '1':
 				print('Ты уже купил меня.')
 			if buynum == 1 and v == '0':
@@ -401,3 +401,4 @@ def ars():
 	w()
 	sp()
 	lobby()
+print('Пожалуйста, запустите main.py!')
