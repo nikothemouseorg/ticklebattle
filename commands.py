@@ -1,5 +1,5 @@
 from time import *
-from Main impor *
+from Main import *
 
 def init_techs():
     v1 = open(r'src/saves vamp.txt', 'r+')
