@@ -276,7 +276,7 @@ def purchace(techname):
 		w()
 		sp()
 		print('Здоровье:')
-		print('150.')
+		print('190.')
 		w()
 		sp()
 		print('Стоимость:')
@@ -285,7 +285,7 @@ def purchace(techname):
 		sp()
 		if g >= 1000:
 			buying = input('Берём? Тогда нажми B. Нет? Жми что угодно: ')
-			if buying == 'B' or buying == 'b' or buying == 'В' or buying == 'в':
+			if buying == 'B' or buying == 'b' or buying == 'В' or buying == 'в' and g >= 1000:
 				print('Теперь вы владеете очень мощной техникой Истребителя!')
 				goldistrebitel = g - 0
 				goldistrebitel = str(goldistrebitel)
@@ -341,14 +341,14 @@ def purchace(techname):
 		w()
 		sp()
 		print('Стоимость:')
-		print('600 щерублей.')
+		print('700 щерублей.')
 		w()
 		sp()
-		if g >= 600:
+		if g >= 700:
 			buying = input('Берём? Тогда нажми B. Нет? Жми что угодно: ')
-			if buying == 'B' or buying == 'b' or buying == 'В' or buying == 'в' and g >= 600:
+			if buying == 'B' or buying == 'b' or buying == 'В' or buying == 'в' and g >= 700:
 				print('Здорово, ведь теперь вы владеете техникой Оружейника!')
-				goldgunshop = g - 600
+				goldgunshop = g - 700
 				goldgunshop = str(goldgunshop)
 				gold = open(r'src/golds.txt', 'r+')
 				gold.seek(0)
@@ -371,26 +371,26 @@ def purchace(techname):
 		w()
 		sp()
 		print('Скорость х./т.:')
-		print('0.5')
+		print('2')
 		w()
 		sp()
 		print('Урон от коронного приёма:')
-		print('Огненный ветер - 20.')
+		print('Растерзание - 30.')
 		w()
 		sp()
 		print('Урон от обычного приёма:')
-		print('Языки пламени - 15.')
+		print('Драконий пыл - 15.')
 		w()
 		sp()
 		print('Здоровье:')
-		print('150.')
+		print('85.')
 		w()
 		sp()
 		print('Стоимость:')
-		print('650 щерублей.')
+		print('700 щерублей.')
 		w()
 		sp()
-		if g >= 650:
+		if g >= 700:
 			buying = input('Берём? Тогда нажми B. Нет? Жми что угодно: ')
 			if buying == 'B' or buying == 'b' or buying == 'В' or buying == 'в' and g >= 650:
 				print('Здорово, ведь теперь вы владеете техникой Феникса!')
