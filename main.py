@@ -1,3 +1,0 @@
-from coms import *
-
-start()
