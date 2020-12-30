@@ -13,6 +13,7 @@ mn1 = open(r'src/saves mnzhk.txt', 'r+')
 u1 = open(r'src/saves uv.txt', 'r+')
 md1 = open(r'src/saves minder.txt', 'r+')
 j1 = open(r'src/saves jelly.txt', 'r+')
+y1 = oprn(r'src/yaliya-techs.txt', 'r+')
 
 gold = open(r'src/golds.txt', 'r+')
 
@@ -86,30 +87,32 @@ def shop():
 		if buynum == 'e' or buynum == 'E' or buynum == 'е' or buynum == 'Е':
 			lobby()
 		if buynum == 1 or buynum == 2 or buynum == 3 or buynum == 4 or buynum == 5 or buynum == 6 or buynum == 7 or buynum == 8 or buynum == 9 or buynum == 10 or buynum == 12 or buynum == 13 or buynum == 14:
-			if buynum == 1 and v == '1':
-				print('Неправильный символ!')
+					if buynum == 1 and v == '1':
+				print('Ты уже купил меня!')
 			elif buynum == 2 and f == '1':
-				print('Неправильный символ!')
+				print('Ты уже купил меня!')
 			elif buynum == 3 and i == '1':
-				print('Неправильный символ!')
+				print('Ты уже купил меня!')
 			elif buynum == 4 and o == '1':
-				print('Неправильный символ!')
+				print('Ты уже купил меня!')
 			elif buynum == 5 and d == '1':
-				print('Неправильный символ!')
+				print('Ты уже купил меня!')
 			elif buynum == 6 and a == '1':
-				print('Неправильный символ!')
+				print('Ты уже купил меня!')
 			elif buynum == 7 and b == '1':
-				print('Неправильный символ!')
+				print('Ты уже купил меня!')
 			elif buynum == 8 and u == '1':
-				print('Неправильный символ!')
+				print('Ты уже купил меня!')
 			elif buynum == 9 and me == '1':
-				print('Неправильный символ!')
+				print('Ты уже купил меня!')
 			elif buynum == 10 and mn == '1':
-				print('Неправильный символ!')
+				print('Ты уже купил меня!')
 			elif buynum == 11 and md == '1':
-				print('Неправильный символ!')
+				print('Ты уже купил меня!')
 			elif buynum == 12 and j == '1':
-				print('Неправильный символ!')
+				print('Ты уже купил меня!')
+			elif buynum == 13 and y == '1':
+				print('Ты уже купил Илью!')
 			if buynum == 1 and v == '0':
 				purchace(buynum)
 				break
@@ -146,6 +149,8 @@ def shop():
 			elif buynum == 12 and u == '0':
 				purchace(buynum)
 				break
+			elif buynum == 13 and y == '0':
+				purchace(buynum)			
 		else:
 			print('Неправильный символ!')
 			return buynum
