@@ -1,0 +1,2 @@
+from coms import *
+start()
