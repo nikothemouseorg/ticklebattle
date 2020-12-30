@@ -32,6 +32,7 @@ mn = mn1.read(1)
 u = u1.read(1)
 md = md1.read(1)
 j = j1.read(1)
+y = y1.read(1)
 
 def shop():
 	sp()
