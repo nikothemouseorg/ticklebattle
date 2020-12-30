@@ -82,13 +82,15 @@ def shop():
 	if u == '0':
 		print('12. Желе')
 		w()
+	if y == '0':
+		print('13. Yaliya')
 # Выбор понравившейся техники или понравившегося артефакта
 	while True:
 		buynum = int(input('Введите номер понравившейся вам вещи (без точки), или E чтобы уйти домой, в лобби: '))
 		if buynum == 'e' or buynum == 'E' or buynum == 'е' or buynum == 'Е':
 			lobby()
 		if buynum == 1 or buynum == 2 or buynum == 3 or buynum == 4 or buynum == 5 or buynum == 6 or buynum == 7 or buynum == 8 or buynum == 9 or buynum == 10 or buynum == 12 or buynum == 13 or buynum == 14:
-					if buynum == 1 and v == '1':
+			if buynum == 1 and v == '1':
 				print('Ты уже купил меня!')
 			elif buynum == 2 and f == '1':
 				print('Ты уже купил меня!')
@@ -151,7 +153,7 @@ def shop():
 				purchace(buynum)
 				break
 			elif buynum == 13 and y == '0':
-				purchace(buynum)			
+				purchace(buynum)
 		else:
 			print('Неправильный символ!')
 			return buynum
@@ -274,17 +276,17 @@ def purchace(techname):
 		w()
 		sp()
 		print('Здоровье:')
-		print('35 (ха-ха-ха!).')
+		print('150.')
 		w()
 		sp()
 		print('Стоимость:')
-		print('0 щерублей.')
+		print('1000 щерублей.')
 		w()
 		sp()
-		if g >= -1:
-			buying = input('Берём? Тогда нажми B. Нет? Жми что угодно (не бери): ')
+		if g >= 1000:
+			buying = input('Берём? Тогда нажми B. Нет? Жми что угодно: ')
 			if buying == 'B' or buying == 'b' or buying == 'В' or buying == 'в':
-				print('Что ты наделал! Ведь теперь вы владеете самой плохой техникой Истребителя!')
+				print('Теперь вы владеете очень мощной техникой Истребителя!')
 				goldistrebitel = g - 0
 				goldistrebitel = str(goldistrebitel)
 				gold = open(r'src/golds.txt', 'r+')
@@ -301,11 +303,11 @@ def purchace(techname):
 				w()
 				w()
 				sp()
-				print('МОЛОДЕЦ!!! :D')
+				print('А что не купил???')
 				w()
 				shop()
 		else:
-			print('Всм? У тебя отрицательный счёт?! Непон...')
+			print('Ничего! Подкопи чуть щерублей!')
 	elif techname == 4:
 		print('Вы выбрали технику Оружейника')
 		w()
@@ -360,6 +362,52 @@ def purchace(techname):
 		else:
 			print('У вас недостаточно щерублей для покупки :(')
 			shop()
+	elif techname == 5:
+		print('Вы выбрали технику Дракона')
+		w()
+		sp()
+		print('Описание:')
+		print('Быстрая, мощная, но уязвимая.')
+		w()
+		sp()
+		print('Скорость х./т.:')
+		print('0.5')
+		w()
+		sp()
+		print('Урон от коронного приёма:')
+		print('Огненный ветер - 20.')
+		w()
+		sp()
+		print('Урон от обычного приёма:')
+		print('Языки пламени - 15.')
+		w()
+		sp()
+		print('Здоровье:')
+		print('150.')
+		w()
+		sp()
+		print('Стоимость:')
+		print('650 щерублей.')
+		w()
+		sp()
+		if g >= 650:
+			buying = input('Берём? Тогда нажми B. Нет? Жми что угодно: ')
+			if buying == 'B' or buying == 'b' or buying == 'В' or buying == 'в' and g >= 650:
+				print('Здорово, ведь теперь вы владеете техникой Феникса!')
+				goldpheonix = g - 650
+				goldpheonix = str(goldpheonix)
+				gold = open(r'src/golds.txt', 'r+')
+				gold.seek(0)
+				gold.close()
+				gold = open(r'src/golds.txt', 'r+')
+				gold.write(goldpheonix)
+				f1.seek(0)
+				p = f1.write('1')
+			else:
+				shop()
+		else:
+			print('У вас недостаточно щерублей для покупки :(')
+			shop()
 
 def ars():
 	sp()
@@ -390,10 +438,6 @@ def ars():
 		print('Майндер')
 	if j == '1':
 		print('Желе')
-	if au == '1':
-		print('Aмулет удачи')
-	if lit == '1':
-		print('[Литералы]')
 	w()
 	w()
 	w()
